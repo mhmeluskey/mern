@@ -19,6 +19,15 @@ app.get("/allusers", function(req, res) {
     .catch(err => res.status(422).json(err));
 });
 
+app.get("/allco2food", function(req, res) {
+  console.log("All users route was hit");
+  db.co2food
+    .find({})
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+});
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
