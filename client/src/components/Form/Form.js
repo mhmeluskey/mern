@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Form.css";
 
 class Form extends Component {
   state = {
@@ -15,8 +16,10 @@ class Form extends Component {
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-      <div>
-        <p>Add Food: {this.state.food}</p>
+      <div className="searchform">
+        <h1>
+          Add Food: <h3 className="red">{this.state.food}</h3>
+        </h1>
         <form className="form">
           <input
             value={this.state.food}
