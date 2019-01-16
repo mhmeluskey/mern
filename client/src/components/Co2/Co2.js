@@ -1,15 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
 // import API from "../../utils/API";
 
-class Co2 extends Component {
-  state = {
-    co2: ""
-  };
-
-  render() {
-    return <h1>{this.state.co2}</h1>;
-  }
-}
+const Co2 = props => <h3>{props.co2}</h3>;
 
 export default Co2;

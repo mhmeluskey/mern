@@ -46,9 +46,9 @@ class Form extends Component {
             placeholder="Food"
           />
         </form>
-        <h3>{this.state.co2}</h3>
+
         <button onClick={this.handleFormSubmit}>Submit</button>
-        <Co2 />
+        <Co2 co2={this.state.co2} />
       </div>
     );
   }

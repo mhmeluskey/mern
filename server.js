@@ -12,6 +12,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+app.use("/api", routes);
+
 app.get("/allusers", function(req, res) {
   console.log("All users route was hit");
   db.User.find({})
@@ -29,13 +31,15 @@ app.get("/allco2food", function(req, res) {
     .catch(err => res.status(422).json(err));
 });
 
+app.get("/co2answer", function(req, res) {
+  console.log("co2answer route was hit");
+});
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
-app.use(routes);
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
