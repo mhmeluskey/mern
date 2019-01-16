@@ -21,7 +21,11 @@ class Form extends Component {
     event.preventDefault();
     console.log(this.state.food);
     API.getCo2(this.state.food)
-      .then(res => this.setState({ food: res.data }))
+      .then(res => {
+        console.log("This is what i got from the server:");
+        console.log(res);
+        this.setState({ food: res.data });
+      })
       .catch(err => console.log(err));
     //if (this.state.food) {
     // API.getCo2Answer({
