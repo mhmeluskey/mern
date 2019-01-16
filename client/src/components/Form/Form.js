@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import "./Form.css";
+import API from "../../utils/API";
+import Co2 from "../Co2/Co2";
 
 class Form extends Component {
   state = {
-    food: ""
+    food: "",
+    co2: ""
   };
 
   handleInputChange = event => {
@@ -13,13 +16,27 @@ class Form extends Component {
     });
   };
 
+  handleFormSubmit = event => {
+    // console.log("find food");
+    event.preventDefault();
+    console.log(this.state.food);
+    API.getCo2(this.state.food)
+      .then(res => this.setState({ food: res.data }))
+      .catch(err => console.log(err));
+    //if (this.state.food) {
+    // API.getCo2Answer({
+    // food: this.state.food,
+    // co2: this.state.co2,
+    //})
+    // .then(res => this.loadBooks())
+    //.catch(err => console.log(err));
+    // }
+  };
+
   render() {
-    // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
       <div className="searchform">
-        <h1>
-          Add Food: <h3 className="red">{this.state.food}</h3>
-        </h1>
+        <h1>Add Food: {this.state.food}</h1>
         <form className="form">
           <input
             value={this.state.food}
@@ -28,9 +45,10 @@ class Form extends Component {
             type="text"
             placeholder="Food"
           />
-
-          <button>{/* </form>onClick={this.handleFormSubmit} */}Submit</button>
         </form>
+        <h3>{this.state.co2}</h3>
+        <button onClick={this.handleFormSubmit}>Submit</button>
+        <Co2 />
       </div>
     );
   }
