@@ -1,15 +1,13 @@
 import axios from "axios";
 
 export default {
-  getCo2: function(id) {
+  getCo2: function(type) {
     console.log("api route hit");
-    return axios.get("/api/food/" + id);
+    return axios.get("/api/food/" + type);
   }
-};
 
-export default {
-  addMeal: function(id) {
-    console.log("hit");
-    return axios.get("/meal")
-  }
-}
+  // addMeal: function(id) {
+  //   console.log("hit");
+  //   return axios.get("/meal");
+  // }
+};
