@@ -6,3 +6,10 @@ export default {
     return axios.get("/api/food/" + id);
   }
 };
+
+export default {
+  addMeal: function(id) {
+    console.log("hit");
+    return axios.get("/meal")
+  }
+}

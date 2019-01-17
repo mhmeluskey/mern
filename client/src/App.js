@@ -1,10 +1,33 @@
 import React, { Component } from "react";
-import Form from "./components/Form/Form";
-import Co2 from "./components/Co2/Co2";
+import logo from "./logo.png";
+import "./App.css";
+import Foot from "./components/Foot";
+import Form from "./components/Form";
+import Header from "./components/Header";
 
 class App extends Component {
   render() {
-    return <Form exact path="/books/:id" component={Co2} />;
+    return (
+      <div className="App">
+        <Header />
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>{" "}
+        <Form />
+        <Foot />
+      </div>
+    );
   }
 }
 

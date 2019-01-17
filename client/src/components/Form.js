@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Form.css";
-import API from "../../utils/API";
-import Co2 from "../Co2/Co2";
+// import API from "../../utils/API";
 
 class Form extends Component {
   state = {
@@ -16,26 +15,26 @@ class Form extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    // console.log("find food");
-    event.preventDefault();
-    console.log(this.state.food);
-    API.getCo2(this.state.food)
-      .then(res => {
-        console.log("This is what i got from the server:");
-        console.log(res);
-        this.setState({ food: res.data });
-      })
-      .catch(err => console.log(err));
-    //if (this.state.food) {
-    // API.getCo2Answer({
-    // food: this.state.food,
-    // co2: this.state.co2,
-    //})
-    // .then(res => this.loadBooks())
-    //.catch(err => console.log(err));
-    // }
-  };
+  // handleFormSubmit = event => {
+  //   // console.log("find food");
+  //   event.preventDefault();
+  //   console.log(this.state.food);
+  //   API.getCo2(this.state.food)
+  //     .then(res => {
+  //       console.log("This is what i got from the server:");
+  //       console.log(res);
+  //       this.setState({ food: res.data });
+  //     })
+  //     .catch(err => console.log(err));
+  //if (this.state.food) {
+  // API.getCo2Answer({
+  // food: this.state.food,
+  // co2: this.state.co2,
+  //})
+  // .then(res => this.loadBooks())
+  //.catch(err => console.log(err));
+  // }
+  // };
 
   render() {
     return (
@@ -52,7 +51,6 @@ class Form extends Component {
         </form>
 
         <button onClick={this.handleFormSubmit}>Submit</button>
-        <Co2 co2={this.state.co2} />
       </div>
     );
   }

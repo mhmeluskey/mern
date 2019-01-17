@@ -10,4 +10,12 @@ router.get("/food/:id", (req, res) => {
     .catch(err => res.status(422).json(err));
 });
 
+router.create("/meal", (req, res) => {
+  console.log("/meal route was hit");
+  db.co2food
+    .create(req.body)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+});
+
 module.exports = router;
