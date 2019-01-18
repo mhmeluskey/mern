@@ -8,6 +8,7 @@
 }
 
 .App-header {
+  background: url(background.jpg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
