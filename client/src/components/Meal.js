@@ -1,9 +1,8 @@
 import React from "react";
 import "./Foot.css";
 import footprint from "./Footprint.png";
-import yellow from "./yellowfoot.png";
 
-function Foot(props) {
+const Meal = props => {
   return (
     <div className="wrapper">
       <div className="card">
@@ -23,6 +22,6 @@ function Foot(props) {
       </div>
     </div>
   );
-}
+};
 
-export default Foot;
+export default Meal;

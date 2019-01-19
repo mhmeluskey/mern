@@ -10,9 +10,9 @@ router.get("/food/:type", (req, res) => {
     .catch(err => res.status(422).json(err));
 });
 
-router.get("/", (req, res) => {
+router.get("/meals", (req, res) => {
   db.meals
-    .find(req.data)
+    .find({})
     .sort({ data: -1 })
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
