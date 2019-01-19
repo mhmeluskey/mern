@@ -3,8 +3,9 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 import React, { Component } from "react";
 import API from "./utils/API";
-import logo from "./logo.png";
+
 import "./App.css";
+import Main from "./components/Main";
 
 class App extends Component {
   state = {
@@ -38,20 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Main />
         <Form
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
