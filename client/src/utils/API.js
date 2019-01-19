@@ -9,9 +9,14 @@ export default {
   getMeals: function() {
     console.log("meals hit");
     return axios.get("/api/meals");
-  }
+  },
   // addMeal: function(id) {
   //   console.log("hit");
   //   return axios.get("/meal");
   // }
+
+  deleteMeal: function(id) {
+    console.log("delete route");
+    return axios.delete("/api/meals/" + id);
+  }
 };

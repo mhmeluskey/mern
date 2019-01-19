@@ -1,13 +1,13 @@
 import React from "react";
 import "./Foot.css";
 import footprint from "./Footprint.png";
+import Delete from "./Delete.js";
 
 const Meal = props => {
   return (
     <div className="wrapper">
       <div className="card">
-        <button>Add</button>
-        <button>&times; </button>
+        <Delete onClick={() => props.deleteMeal(props.id)} />
         <div className="img-container">
           <img src={footprint} alt="footprint" />
         </div>

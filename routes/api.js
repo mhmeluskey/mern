@@ -18,4 +18,12 @@ router.get("/meals", (req, res) => {
     .catch(err => res.status(422).json(err));
 });
 
+router.delete("/meals/:id", (req, res) => {
+  db.meals
+    .findById({ _id: req.params.id })
+    .then(dbModel => dbModel.remove())
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+});
+
 module.exports = router;

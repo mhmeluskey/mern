@@ -25,12 +25,26 @@ class Meals extends Component {
       })
       .catch(err => console.log(err));
   };
+
+  deleteMeal = id => {
+    console.log(id);
+    API.deleteMeal(id)
+      .then(res => this.loadMeals())
+      .catch(err => console.log(err));
+  };
+
   render() {
     return (
       <div>
         <h1>My Meals</h1>
         {this.state.meals.map(meal => (
-          <Meal key={meal.id} food={meal.food} co2={meal.co2} />
+          <Meal
+            id={meal._id}
+            key={meal._id}
+            food={meal.food}
+            co2={meal.co2}
+            deleteMeal={this.deleteMeal}
+          />
         ))}
       </div>
     );
