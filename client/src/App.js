@@ -89,7 +89,7 @@ class App extends Component {
     API.saveMeal({
       food: this.state.food,
       co2: this.state.co2
-    });
+    }).then(this.push.meals);
   };
 
   render() {
