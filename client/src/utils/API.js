@@ -18,5 +18,10 @@ export default {
   deleteMeal: function(id) {
     console.log("delete route");
     return axios.delete("/api/meals/" + id);
+  },
+
+  saveMeal: function(mealData) {
+    console.log("meal route");
+    return axios.post("/api/meals", mealData);
   }
 };

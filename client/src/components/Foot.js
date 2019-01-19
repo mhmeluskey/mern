@@ -2,12 +2,14 @@ import React from "react";
 import "./Foot.css";
 import footprint from "./Footprint.png";
 import yellow from "./yellowfoot.png";
+import API from "../utils/API";
+import Add from "./Add";
 
 function Foot(props) {
   return (
     <div className="wrapper">
       <div className="card">
-        <button>Add</button>
+        <Add onClick={() => props.handleAddMeal(props.id)} />
         <button>&times; </button>
         <div className="img-container">
           <img src={footprint} alt="footprint" />

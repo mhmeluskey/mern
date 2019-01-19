@@ -26,4 +26,12 @@ router.delete("/meals/:id", (req, res) => {
     .catch(err => res.status(422).json(err));
 });
 
+router.post("/meals", (req, res) => {
+  console.log("adding meals");
+  db.meals
+    .create(req.body)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+});
+
 module.exports = router;

@@ -12,7 +12,8 @@ class App extends Component {
   state = {
     food: "",
     co2: "",
-    currentPage: "Main"
+    id: "",
+    meals: ""
   };
 
   // componentDidMount() {
@@ -58,6 +59,15 @@ class App extends Component {
       .catch(err => console.log(err));
   };
 
+  handleAddMeal = id => {
+    console.log("savemeal");
+    API.saveMeal({
+      id: this.state.id,
+      food: this.state.food,
+      co2: this.state.co2
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -75,7 +85,13 @@ class App extends Component {
               handleFormSubmit={this.handleFormSubmit}
               food={this.food}
             />
-            <Foot co2={this.state.co2} food={this.state.food} />
+            <Foot
+              co2={this.state.co2}
+              food={this.state.food}
+              id={this.state.id}
+              meals={this.state.meals}
+              handleAddMeal={this.handleAddMeal}
+            />
           </div>
         </Router>
       </div>
