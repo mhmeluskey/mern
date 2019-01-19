@@ -29,6 +29,19 @@ const co2foodSeed = [
   }
 ];
 
+const meals = [
+  {
+    food: "Lamb",
+    rank: 1,
+    co2: 39.2
+  },
+  {
+    food: "Beef",
+    rank: 2,
+    co2: 27.0
+  }
+];
+
 db.User.remove({})
   .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
@@ -43,6 +56,18 @@ db.User.remove({})
 db.co2food
   .remove({})
   .then(() => db.co2food.collection.insertMany(co2foodSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+db.meals
+  .remove({})
+  .then(() => db.meals.collection.insertMany(meals))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

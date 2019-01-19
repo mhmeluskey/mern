@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import "./Form.css";
 
 class Form extends Component {
-  state = {
-    food: "",
-    co2: ""
-  };
-
   render() {
     return (
       <div className="searchform">

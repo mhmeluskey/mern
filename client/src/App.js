@@ -3,14 +3,38 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 import React, { Component } from "react";
 import API from "./utils/API";
-
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
+import Meals from "./components/Meals";
 
 class App extends Component {
   state = {
     food: "",
-    co2: ""
+    co2: "",
+    currentPage: "Main"
+  };
+
+  componentDidMount() {
+    this.loadMeals();
+  }
+
+  loadMeals = () => {
+    API.getMeals()
+      .then(res => this.setState({ meals: res.data }))
+      .catch(err => console.log(err));
+  };
+
+  renderPage = () => {
+    if (this.state.currentPage === "Main") {
+      return <Main />;
+    } else {
+      return <Meals />;
+    }
+  };
+
+  handlePageChange = page => {
+    this.setState({ currentPage: page });
   };
 
   handleInputChange = event => {
@@ -38,14 +62,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Main />
-        <Form
-          handleInputChange={this.handleInputChange}
-          handleFormSubmit={this.handleFormSubmit}
-          food={this.food}
-        />
-        <Foot co2={this.state.co2} food={this.state.food} />
+        <Router>
+          <div>
+            <Header
+              currentPage={this.state.currentPage}
+              handlePageChange={this.handlePageChange}
+            />
+            {this.renderPage()}
+            <Form
+              handleInputChange={this.handleInputChange}
+              handleFormSubmit={this.handleFormSubmit}
+              food={this.food}
+            />
+            <Foot co2={this.state.co2} food={this.state.food} />
+          </div>
+        </Router>
       </div>
     );
   }
