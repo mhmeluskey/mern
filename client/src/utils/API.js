@@ -16,6 +16,7 @@ export default {
   // }
 
   deleteMeal: function(id) {
+    console.log(id);
     console.log("delete route");
     return axios.delete("/api/meals/" + id);
   },

@@ -13,7 +13,7 @@ class App extends Component {
     food: "",
     co2: "",
     id: "",
-    meals: ""
+    meals: []
   };
 
   // componentDidMount() {
@@ -38,6 +38,29 @@ class App extends Component {
   //   this.setState({ currentPage: page });
   // };
 
+  componentDidMount() {
+    console.log("dsdsd");
+    this.loadMeals();
+  }
+
+  loadMeals = () => {
+    console.log("dsdssd");
+    API.getMeals()
+      .then(res => {
+        this.setState({
+          meals: res.data
+        });
+      })
+      .catch(err => console.log(err));
+  };
+
+  deleteMeal = id => {
+    console.log(id);
+    API.deleteMeal(id)
+      .then(res => this.loadMeals())
+      .catch(err => console.log(err));
+  };
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -54,15 +77,16 @@ class App extends Component {
       .then(res => {
         console.log("This is what i got from the server:");
         console.log(res);
-        this.setState({ co2: res.data.co2 });
+        this.setState({ co2: res.data.co2, id: res.data.id });
       })
       .catch(err => console.log(err));
   };
 
   handleAddMeal = id => {
-    console.log("savemeal");
+    console.log(this.state.food);
+    console.log(this.state.co2);
+
     API.saveMeal({
-      id: this.state.id,
       food: this.state.food,
       co2: this.state.co2
     });
@@ -74,12 +98,7 @@ class App extends Component {
         <Router>
           <div>
             <Header />
-            <Switch>
-              <Route exact path="/home" component={Main} />
-              <Route exact path="/meals" component={Meals} />
-              <Route exact path="/food/:id" component={Foot} />
-            </Switch>
-
+            <Main />
             <Form
               handleInputChange={this.handleInputChange}
               handleFormSubmit={this.handleFormSubmit}
@@ -91,6 +110,14 @@ class App extends Component {
               id={this.state.id}
               meals={this.state.meals}
               handleAddMeal={this.handleAddMeal}
+            />
+            <Meals
+              co2={this.state.co2}
+              food={this.state.food}
+              id={this.state.id}
+              meals={this.state.meals}
+              handleAddMeal={this.handleAddMeal}
+              deleteMeal={this.deleteMeal}
             />
           </div>
         </Router>

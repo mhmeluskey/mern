@@ -32,12 +32,10 @@ const co2foodSeed = [
 const meals = [
   {
     food: "Lamb",
-    rank: 1,
     co2: 39.2
   },
   {
     food: "Beef",
-    rank: 2,
     co2: 27.0
   }
 ];

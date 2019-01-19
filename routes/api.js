@@ -28,6 +28,7 @@ router.delete("/meals/:id", (req, res) => {
 
 router.post("/meals", (req, res) => {
   console.log("adding meals");
+  console.log(req.body);
   db.meals
     .create(req.body)
     .then(dbModel => res.json(dbModel))

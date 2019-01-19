@@ -5,6 +5,9 @@ const app = express();
 const routes = require("./routes/api");
 const mongoose = require("mongoose");
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/co2food");
 const db = require("./models");
 // Serve up static assets (usually on heroku)
