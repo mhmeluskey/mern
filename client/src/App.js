@@ -92,9 +92,7 @@ class App extends Component {
       let updatedMeals = [...this.state.meals]; // this makes an actual COPY of the array
       updatedMeals.push(res);
       this.setState({
-        meals: updatedMeals,
-        food: this.state.food,
-        co2: this.state.co2
+        meals: updatedMeals
       });
     });
   };
