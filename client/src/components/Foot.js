@@ -1,8 +1,7 @@
 import React from "react";
 import "./Foot.css";
 import footprint from "./Footprint.png";
-import yellow from "./yellowfoot.png";
-import API from "../utils/API";
+
 import Add from "./Add";
 
 function Foot(props) {

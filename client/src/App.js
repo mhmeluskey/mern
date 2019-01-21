@@ -84,11 +84,18 @@ class App extends Component {
 
   handleAddMeal = id => {
     console.log(this.state.food);
-    console.log(this.state.co2);
 
     API.saveMeal({
       food: this.state.food,
       co2: this.state.co2
+    }).then(res => {
+      let updatedMeals = [...this.state.meals]; // this makes an actual COPY of the array
+      updatedMeals.push(res);
+      this.setState({
+        meals: updatedMeals,
+        food: this.state.food,
+        co2: this.state.co2
+      });
     });
   };
 
