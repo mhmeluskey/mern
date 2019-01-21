@@ -12,6 +12,7 @@ const Meals = props => {
           key={meal._id}
           food={meal.food}
           co2={meal.co2}
+          handleAddMeal={props.handleAddMeal}
           deleteMeal={props.deleteMeal}
         />
       ))}
