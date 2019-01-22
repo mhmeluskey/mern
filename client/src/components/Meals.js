@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import Meal from "./Meal.js";
-import API from "../utils/API";
 
 const Meals = props => {
   return (
@@ -14,6 +13,7 @@ const Meals = props => {
           co2={meal.co2}
           handleAddMeal={props.handleAddMeal}
           deleteMeal={props.deleteMeal}
+          image={props.image}
         />
       ))}
     </div>

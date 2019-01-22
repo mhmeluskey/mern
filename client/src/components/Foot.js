@@ -1,7 +1,5 @@
 import React from "react";
 import "./Foot.css";
-import footprint from "./Footprint.png";
-
 import Add from "./Add";
 
 function Foot(props) {
@@ -10,9 +8,7 @@ function Foot(props) {
       <div className="card">
         <Add onClick={() => props.handleAddMeal(props.id)} />
         <button>&times; </button>
-        <div className="img-container">
-          <img src={footprint} alt="footprint" />
-        </div>
+        <div className="img-container" />
         <div className="results">
           <p className="result__food">
             Food: {props.food}

@@ -43,6 +43,12 @@ class App extends Component {
     this.loadMeals();
   }
 
+  // renderImage = () => {
+  //   const red = { redfootprint };
+  //   let image = this.state.co2 >= 30 ? this.state.image : red;
+  //   this.state.image = image;
+  // };
+
   loadMeals = () => {
     console.log("dsdssd");
     API.getMeals()
@@ -50,6 +56,7 @@ class App extends Component {
         this.setState({
           meals: res.data
         });
+        // .then(this.renderImage());
       })
       .catch(err => console.log(err));
   };
@@ -125,6 +132,7 @@ class App extends Component {
               meals={this.state.meals}
               handleAddMeal={this.handleAddMeal}
               deleteMeal={this.deleteMeal}
+              image={this.image}
             />
           </div>
         </Router>
