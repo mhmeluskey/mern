@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const co2foodSchema = new Schema({
   food: { type: String, required: true },
-  rank: { type: Number, required: true },
   co2: { type: Number, required: true }
 });
 

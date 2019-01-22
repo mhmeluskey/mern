@@ -113,18 +113,21 @@ class App extends Component {
           <div>
             <Header />
             <Main />
-            <Form
-              handleInputChange={this.handleInputChange}
-              handleFormSubmit={this.handleFormSubmit}
-              food={this.food}
-            />
-            <Foot
-              co2={this.state.co2}
-              food={this.state.food}
-              id={this.state.id}
-              meals={this.state.meals}
-              handleAddMeal={this.handleAddMeal}
-            />
+            <div id="formfoot">
+              <Form
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+                food={this.food}
+              />
+
+              <Foot
+                co2={this.state.co2}
+                food={this.state.food}
+                id={this.state.id}
+                meals={this.state.meals}
+                handleAddMeal={this.handleAddMeal}
+              />
+            </div>
             <Meals
               co2={this.state.co2}
               food={this.state.food}

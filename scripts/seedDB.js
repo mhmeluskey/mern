@@ -18,25 +18,143 @@ const userSeed = [
 
 const co2foodSeed = [
   {
-    food: "Lamb",
-    rank: 1,
-    co2: 39.2
+    food: "lamb",
+    co2: 4312
   },
   {
-    food: "Beef",
-    rank: 2,
-    co2: 27.0
+    food: "beef",
+    co2: 2970
+  },
+  {
+    food: "cheese",
+    co2: 1485
+  },
+  {
+    food: "pork",
+    co2: 1331
+  },
+  {
+    food: "turkey",
+    co2: 1199
+  },
+  {
+    food: "chicken",
+    co2: 759
+  },
+  {
+    food: "tuna",
+    co2: 671
+  },
+  {
+    food: "eggs",
+    co2: 528
+  },
+  {
+    food: "potatoes",
+    co2: 319
+  },
+  {
+    food: "rice",
+    co2: 297
+  },
+  {
+    food: "nuts",
+    co2: 253
+  },
+  {
+    food: "beans",
+    co2: 220
+  },
+  {
+    food: "tofu",
+    co2: 220
+  },
+  {
+    food: "vegetables",
+    co2: 220
+  },
+  {
+    food: "milk",
+    co2: 209
+  },
+  {
+    food: "fruit",
+    co2: 121
+  },
+  {
+    food: "lentils",
+    co2: 99
   }
 ];
 
 const meals = [
   {
-    food: "Lamb",
-    co2: 39.2
+    food: "lamb",
+    co2: 4312
   },
   {
-    food: "Beef",
-    co2: 27.0
+    food: "beef",
+    co2: 2970
+  },
+  {
+    food: "cheese",
+    co2: 1485
+  },
+  {
+    food: "pork",
+    co2: 1331
+  },
+  {
+    food: "turkey",
+    co2: 1199
+  },
+  {
+    food: "chicken",
+    co2: 759
+  },
+  {
+    food: "tuna",
+    co2: 671
+  },
+  {
+    food: "eggs",
+    co2: 528
+  },
+  {
+    food: "potatoes",
+    co2: 319
+  },
+  {
+    food: "rice",
+    co2: 297
+  },
+  {
+    food: "nuts",
+    co2: 253
+  },
+  {
+    food: "beans",
+    co2: 220
+  },
+  {
+    food: "tofu",
+    co2: 220
+  },
+  {
+    food: "vegetables",
+    co2: 220
+  },
+  {
+    food: "milk",
+    co2: 209
+  },
+  {
+    food: "fruit",
+    co2: 121
+  },
+  {
+    food: "lentils",
+    co2: 99
   }
 ];
 

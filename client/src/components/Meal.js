@@ -12,9 +12,9 @@ class Meal extends Component {
 
   renderImage = () => {
     console.log("render");
-    if (this.props.co2 > 30) {
+    if (this.props.co2 > 1000) {
       this.setState({ image: red });
-    } else if (this.props.co2 > 25) {
+    } else if (this.props.co2 > 500) {
       this.setState({ image: yellow });
     }
   };
@@ -28,9 +28,10 @@ class Meal extends Component {
     return (
       <div className="wrapper">
         <div className="card">
-          <Delete onClick={() => this.props.deleteMeal(this.props.id)} />
           <div className="img-container">
-            <img src={this.state.image} />
+            {" "}
+            <Delete onClick={() => this.props.deleteMeal(this.props.id)} />
+            <img className="foot" src={this.state.image} />
           </div>
           <div className="results">
             <p className="result__food">
