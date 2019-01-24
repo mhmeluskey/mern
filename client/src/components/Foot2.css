@@ -1,0 +1,28 @@
+.hello {
+  border-radius: 2px;
+  background-color: white;
+  height: 300px;
+  width: 400px;
+  box-shadow: 2px 6px 6px 2px orangered, 2px 6px 6px 2px #999;
+  overflow: auto;
+  margin-left: 10%;
+  float: left;
+  position: relative;
+  font-family: "Fredoka One";
+  text-align: center;
+  padding-top: 70px;
+}
+
+h1 {
+  /* color: orangered; */
+}
+
+.addbutton {
+  margin-left: 45%;
+  margin-right: 45%;
+  color: orangered;
+}
+
+.grams {
+  color: orangered;
+}

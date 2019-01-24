@@ -1,16 +1,14 @@
 import React from "react";
-import "./Foot.css";
+import "./Foot2.css";
 import Add from "./Add";
 
 function Foot(props) {
   return (
-    <div className="footcard">
-      <p className="result__food">
-        Food: {props.food}
-        {/* {co2food.food} */}
-        <br /> Co2 in Kilos: {props.co2}
-        {/* {co2food.co2} */}
-      </p>
+    <div className="hello">
+      <h1 className="result__food">{props.food} </h1>
+      {/* {co2food.food} */}
+      <p className="grams">Grams of CO2:</p> <h1>{props.co2}</h1>
+      {/* {co2food.co2} */}
       <Add onClick={() => props.handleAddMeal(props.id)} />
     </div>
   );

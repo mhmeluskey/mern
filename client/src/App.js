@@ -1,12 +1,12 @@
 import Foot from "./components/Foot";
 import Form from "./components/Form";
-import Header from "./components/Header";
 import React, { Component } from "react";
 import API from "./utils/API";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Main from "./components/Main";
 import Meals from "./components/Meals";
+import Main from "./components/Main";
+import Mealtypes from "./components/Mealtypes";
+import Footer from "./components/Footer";
 
 class App extends Component {
   state = {
@@ -108,37 +108,33 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Router>
-          <div>
-            <Header />
-            <Main />
-            <div id="formfoot">
-              <Form
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-                food={this.food}
-              />
-
-              <Foot
-                co2={this.state.co2}
-                food={this.state.food}
-                id={this.state.id}
-                meals={this.state.meals}
-                handleAddMeal={this.handleAddMeal}
-              />
-            </div>
-            <Meals
-              co2={this.state.co2}
-              food={this.state.food}
-              id={this.state.id}
-              meals={this.state.meals}
-              handleAddMeal={this.handleAddMeal}
-              deleteMeal={this.deleteMeal}
-              image={this.image}
-            />
-          </div>
-        </Router>
+      <div>
+        <Main />
+        <Mealtypes />
+        <Form
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
+          food={this.food}
+        />
+        <Foot
+          co2={this.state.co2}
+          food={this.state.food}
+          id={this.state.id}
+          meals={this.state.meals}
+          handleAddMeal={this.handleAddMeal}
+        />
+        <div className="wrapper">
+          <Meals
+            co2={this.state.co2}
+            food={this.state.food}
+            id={this.state.id}
+            meals={this.state.meals}
+            handleAddMeal={this.handleAddMeal}
+            deleteMeal={this.deleteMeal}
+            image={this.image}
+          />
+        </div>
+        <Footer />
       </div>
     );
   }

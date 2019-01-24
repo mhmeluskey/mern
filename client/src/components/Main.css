@@ -1,25 +1,98 @@
-.App {
+.static-logo {
+  margin-top: 10%;
+  height: 300px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.menu-hidden {
+  visibility: hidden;
+}
+
+.title {
+  font-family: "Fredoka One";
+  font-size: 60px;
   text-align: center;
+  background-color: black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 70vmin;
+.directions {
+  color: orangered;
+  text-align: center;
+  font-size: 30px;
+  margin-left: 300px;
+  margin-right: 300px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.App-header {
-  background: url(fruitvegbackground.png) fixed no-repeat;
-  background-size: 100%;
-  background-position: 90%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.global {
+  margin-top: 200px;
+}
+
+.form {
+  color: orangered;
+}
+nav {
+  margin: 15px;
+  color: orangered;
+  font-family: "Fredoka One";
+  text-align: center;
+  font-size: 30px;
+}
+
+.rightside {
+  background: orangered;
+  background-size: 10%;
+  background-position: 10%;
+  height: 550px;
+  width: 50%;
+  padding: 20px;
   color: white;
+  position: relative;
+  float: left;
 }
 
-.App-link {
-  color: #61dafb;
+.white {
+  height: 100px;
+  text-align: center;
+  float: left;
+  position: relative;
+  margin-left: 30%;
+}
+
+.track {
+  margin: 10px;
+}
+
+.words h1 {
+  font-family: "Fredoka One";
+  font-size: 60px;
+  margin: 5%;
+  float: left;
+  position: relative;
+}
+
+.mealtime {
+  margin-top: 100px;
+  float: left;
+  position: relative;
+}
+
+.words h5 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+}
+
+.leftside {
+  background: url(fruitvegbackground.png) no-repeat fixed;
+  background-size: 60%;
+  background-position: 110% 30%;
+  height: 550px;
+  width: 50%;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  float: left;
+  margin-bottom: 20px;
 }
