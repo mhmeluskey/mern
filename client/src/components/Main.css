@@ -26,7 +26,7 @@
 }
 
 .global {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .form {
@@ -44,7 +44,7 @@ nav {
   background: orangered;
   background-size: 10%;
   background-position: 10%;
-  height: 550px;
+  height: 450px;
   width: 50%;
   padding: 20px;
   color: white;
@@ -87,30 +87,80 @@ nav {
   background: url(fruitvegbackground.png) no-repeat fixed;
   background-size: 60%;
   background-position: 110% 30%;
-  height: 550px;
+  height: 450px;
   width: 50%;
-  padding: 20px;
+  padding: 0px;
   color: white;
   text-align: center;
   position: relative;
   float: left;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 900px) {
+  .rightside {
+    background: orangered;
+    background-size: 10%;
+    background-position: 10%;
+    height: 375px;
+    width: 50%;
+    padding: 20px;
+    color: white;
+    position: relative;
+    float: left;
+  }
+
+  .leftside {
+    background: url(fruitvegbackground.png) no-repeat cover;
+    background-size: 100%;
+    background-position: 100% 30%;
+    height: 375px;
+    width: 50%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin-bottom: 0px;
+  }
+
+  .words h1 {
+    font-family: "Fredoka One";
+    font-size: 40px;
+    margin: 5%;
+    float: left;
+    position: relative;
+  }
+
+  .mealtime {
+    margin-top: 10px;
+    float: left;
+    position: relative;
+  }
+
+  .directions {
+    color: orangered;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .leftside {
-    background: url(fruitvegbackground.png) no-repeat fixed;
+    background: url(fruitvegbackground.png) no-repeat;
     background-size: 100%;
     background-position: 110% 30%;
-    height: 550px;
+    height: 300px;
     width: 100%;
     padding: 20px;
     color: white;
     text-align: center;
-    /* position: relative; */
-    float: left;
-    margin-bottom: 20px;
-    display: none;
+    position: relative;
+    float: none;
+    margin-bottom: 0px;
+    display: hidden;
   }
 
   .rightside {
@@ -119,10 +169,10 @@ nav {
     background-position: 10%;
     height: 450px;
     width: 100%;
-    padding: 4px;
+    padding: 0px;
     color: white;
     position: relative;
-    float: left;
+    float: none;
   }
 
   .white {
@@ -134,11 +184,12 @@ nav {
   }
 
   .static-logo {
-    margin-top: 10%;
     position: absolute;
-    height: 300px;
+    height: 200px;
+    margin-top: 30px;
     cursor: pointer;
     opacity: 0.8;
+    margin-left: -100px;
   }
 
   .mealtime {

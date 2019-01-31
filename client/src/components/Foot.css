@@ -87,5 +87,11 @@
 
 /* media queries  */
 
-@media screen and (max-width: 1300px) {
+@media only screen and (max-width: 900px) {
+  .mealtitle {
+    margin-top: 500px;
+    /* margin-bottom: 400px; */
+    color: orangered;
+    font-family: "Fredoka One";
+  }
 }
