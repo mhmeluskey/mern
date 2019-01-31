@@ -123,6 +123,7 @@ class App extends Component {
           meals={this.state.meals}
           handleAddMeal={this.handleAddMeal}
         />
+        <h1 className="mealtitle" />
         <div className="wrapper">
           <Meals
             co2={this.state.co2}

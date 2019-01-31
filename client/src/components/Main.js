@@ -24,7 +24,6 @@ const Main = () => {
         <div className="directions">
           Enter in the last type of food you ate to see what the average serving
           size of 110 Grams releases in Carbon Emissons. Add the food to your
-          meals to keep track.
         </div>
       </header>
     </div>

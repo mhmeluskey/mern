@@ -65,21 +65,27 @@
   text-align: center;
   margin-left: 18%;
   margin-right: 18%;
-  margin-top: 14%;
+  margin-top: 20%;
 }
 
 .mealtitle {
-  margin-bottom: -300px;
+  margin-top: 100px;
+  /* margin-bottom: 400px; */
   color: orangered;
   font-family: "Fredoka One";
 }
 
 .Footer {
   background-color: orangered;
-  top: 0%;
+  bottom: 50%;
   height: 50px;
 }
 
 .results p {
   line-height: 0.8;
+}
+
+/* media queries  */
+
+@media screen and (max-width: 1300px) {
 }
